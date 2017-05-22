@@ -5,24 +5,28 @@ set -e
 root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
-version="0.12.1"
-url="https://bamboo.dash.org/browse/DASHL-REL/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist"
+# TODO Update version and releases URL
+version="1.0.0.1"
+url="https://github.com/muecoin/MonetaryUnit-X11-BETA/raw/master/muex11beta-1.0.0.1.tgz"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
-        tarball_name="dashcore-${version}-linux64.tar.gz"
+        tarball_name="muecore-${version}-linux64.tar.gz"
     elif [ "${arch}" == "x86_32" ]; then
-        tarball_name="dashcore-${version}-linux32.tar.gz"
+        tarball_name="muecore-${version}-linux32.tar.gz"
     fi
 elif [ "${platform}" == "darwin" ]; then
-    tarball_name="dashcore-${version}-osx64.tar.gz"
+    tarball_name="muecore-${version}-osx64.tar.gz"
 else
-    echo "Dash binary distribution not available for platform and architecture"
+    echo "MUE binary distribution not available for platform and architecture"
     exit -1
 fi
 
-binary_url="${url}/${tarball_name}"
-shasums_url="${url}/SHA256SUMS.asc"
+# TODO revert to proper release referance and MD5 checksum
+#binary_url="${url}/${tarball_name}"
+binary_url="${url}"
+#shasums_url="${url}/SHA256SUMS.asc"
+shasums_url=""
 
 download_bitcoind() {
 
@@ -31,7 +35,7 @@ download_bitcoind() {
 
     cd "${root_dir}/data"
 
-    echo "Downloading dash: ${binary_url}"
+    echo "Downloading MUECORE: ${binary_url}"
 
     is_curl=true
     if hash curl 2>/dev/null; then
@@ -47,23 +51,24 @@ download_bitcoind() {
             curl -L $shasums_url > SHA256SUMS.asc
         else
             wget $binary_url
+
             wget $shasums_url
         fi
         if test -e "${tarball_name}"; then
-            echo "Unpacking dash distribution"
+            echo "Unpacking muecore distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                ln -sf "dashcore-${version}/bin/dashd"
+                ln -sf "muecore-${version}/bin/mued"
                 return;
             fi
         fi
     fi
-    echo "Dash binary distribution could not be downloaded"
+    echo "MUECORE binary distribution could not be downloaded"
     exit -1
 }
 
 verify_download() {
-    echo "Verifying signatures of dash download"
+    echo "Verifying signatures of MUECORE download"
     gpg --verify "${root_dir}/bin/SHA256SUMS.asc"
 
     if hash shasum 2>/dev/null; then
