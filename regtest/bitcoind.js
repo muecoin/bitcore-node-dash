@@ -225,7 +225,7 @@ describe('Bitcoind Functionality', function() {
     });
 
     it('will return error if the transaction does not exist', function(done) {
-      var txid = '6226c407d0e9705bdd7158e60983e37d0f5d23529086d6672b07d9238d5aa618';
+      var txid = '074e605730fb074c5c51224577d2240e3b7c0d5c572b11cb334e73d9bd011b6c';
       bitcoind.getTransaction(txid, function(err, response) {
         should.exist(err);
         done();
@@ -251,7 +251,7 @@ describe('Bitcoind Functionality', function() {
     });
 
     it('will return error if the transaction does not exist', function(done) {
-      var txid = '6226c407d0e9705bdd7158e60983e37d0f5d23529086d6672b07d9238d5aa618';
+      var txid = '074e605730fb074c5c51224577d2240e3b7c0d5c572b11cb334e73d9bd011b6c';
       bitcoind.getRawTransaction(txid, function(err, response) {
         should.exist(err);
         done();
