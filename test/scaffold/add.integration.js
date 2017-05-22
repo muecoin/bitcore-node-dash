@@ -95,7 +95,7 @@ describe('#add', function() {
       var oldPackage = {
         dependencies: {
           'bitcore-lib-dash': '^v0.13.17',
-          'bitcore-node-dash': '^v0.2.0'
+          'bitcore-node-mue': '^v0.2.0'
         }
       };
       var spawn = sinon.stub().returns({
