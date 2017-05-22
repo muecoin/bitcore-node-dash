@@ -5,7 +5,7 @@ Bitcore Node has a service module system that can start up additional services t
 - HTTP routes
 - Event types to publish and subscribe
 
-The `bitcore-node-dash.json` file describes which services will load for a node:
+The `bitcore-node-mue.json` file describes which services will load for a node:
 
 ```json
 {
@@ -27,14 +27,14 @@ Services correspond with a Node.js module as described in 'package.json', for ex
 }
 ```
 
-_Note:_ If you already have a bitcore-node-dash database, and you want to query data from previous blocks in the blockchain, you will need to reindex. Reindexing right now means deleting your bitcore-node-dash database and resyncing.
+_Note:_ If you already have a bitcore-node-mue database, and you want to query data from previous blocks in the blockchain, you will need to reindex. Reindexing right now means deleting your bitcore-node-mue database and resyncing.
 
 ## Using Services Programmatically
 If, instead, you would like to run a custom node, you can include services by including them in your configuration object when initializing a new node.
 
 ```js
 //Require bitcore
-var bitcore = require('bitcore-node-dash');
+var bitcore = require('bitcore-node-mue');
 
 //Services
 var Bitcoin = bitcore.services.Bitcoin;

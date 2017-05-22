@@ -6,7 +6,7 @@ A MUE full node for building applications and services with Node.js. A node is e
 ## Install
 
 ```bash
-npm install -g bitcore-node-dash
+npm install -g bitcore-node-mue
 ```
 
 ## Prerequisites
@@ -22,11 +22,11 @@ npm install -g bitcore-node-dash
 Bitcore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
 
 ```bash
-bitcore-node-dash create -d <dash-data-dir> mynode
+bitcore-node-mue create -d <dash-data-dir> mynode
 cd mynode
-bitcore-node-dash install <service>
-bitcore-node-dash install https://github.com/yourname/helloworld
-bitcore-node-dash start
+bitcore-node-mue install <service>
+bitcore-node-mue install https://github.com/yourname/helloworld
+bitcore-node-mue start
 ```
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
@@ -60,7 +60,7 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore-node-dash/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/bitpay/bitcore-node-mue/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
 
