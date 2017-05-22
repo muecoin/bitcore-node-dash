@@ -94,7 +94,7 @@ describe('#add', function() {
       var callCount = 0;
       var oldPackage = {
         dependencies: {
-          'bitcore-lib-dash': '^v0.13.17',
+          'bitcore-lib-mue': '^v0.13.17',
           'bitcore-node-mue': '^v0.2.0'
         }
       };
