@@ -845,7 +845,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getNetworkConfigPath().should.equal('testnet3/dash.conf');
+      bitcoind._getNetworkConfigPath().should.equal('testnet3/mue.conf');
     });
     it('will get default rpc port for regtest', function() {
       bitcore.Networks.enableRegtest();
@@ -859,7 +859,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getNetworkConfigPath().should.equal('regtest/dash.conf');
+      bitcoind._getNetworkConfigPath().should.equal('regtest/mue.conf');
     });
   });
 

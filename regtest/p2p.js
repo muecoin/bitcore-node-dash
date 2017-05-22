@@ -52,7 +52,7 @@ describe('P2P Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/dashd')
+          exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/mued')
         },
         node: {
           network: bitcore.Networks.testnet
@@ -63,7 +63,7 @@ describe('P2P Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for Dash Core to initialize...');
+      log.info('Waiting for MUE Core to initialize...');
 
       bitcoind.start(function(err) {
         if (err) {

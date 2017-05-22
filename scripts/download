@@ -57,7 +57,7 @@ download_bitcoind() {
             echo "Unpacking muecore distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                ln -sf "muecore-${version}/bin/mued"
+            #    ln -sf "muecore-${version}/bin/mued"
                 return;
             fi
         fi

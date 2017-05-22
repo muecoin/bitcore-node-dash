@@ -32,3 +32,4 @@ regtest/data/node3/regtest
 .idea/vcs.xml
 .idea/workspace.xml
 npm-debug.log
+yarn.lock

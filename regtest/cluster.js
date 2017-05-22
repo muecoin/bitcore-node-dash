@@ -19,11 +19,11 @@ var BitcoinService = index.services.Bitcoin;
 describe('Bitcoin Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/dashd')
+  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/mued')
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),
-      conf: path.resolve(__dirname, './data/node1/dash.conf'),
+      conf: path.resolve(__dirname, './data/node1/mue.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30521,
@@ -32,7 +32,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node2'),
-      conf: path.resolve(__dirname, './data/node2/dash.conf'),
+      conf: path.resolve(__dirname, './data/node2/mue.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30522,
@@ -41,7 +41,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node3'),
-      conf: path.resolve(__dirname, './data/node3/dash.conf'),
+      conf: path.resolve(__dirname, './data/node3/mue.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30523,
@@ -51,7 +51,7 @@ describe('Bitcoin Cluster', function() {
   ];
 
   before(function(done) {
-    log.info('Starting 3 dashd daemons');
+    log.info('Starting 3 mued daemons');
     this.timeout(200000);
     async.each(nodesConf, function(nodeConf, next) {
       var opts = [
