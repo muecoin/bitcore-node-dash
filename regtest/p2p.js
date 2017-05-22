@@ -69,7 +69,7 @@ describe('P2P Functionality', function() {
         if (err) {
           throw err;
         }
-        log.info('Bitcoind started');
+        log.info('mued started');
 
         client = new BitcoinRPC({
           protocol: 'http',

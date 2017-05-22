@@ -63,7 +63,7 @@ describe('Bitcoind Functionality', function() {
       log.info('Waiting for Bitcoin Core to initialize...');
 
       bitcoind.start(function() {
-        log.info('Bitcoind started');
+        log.info('mued started');
 
         client = new BitcoinRPC({
           protocol: 'http',
