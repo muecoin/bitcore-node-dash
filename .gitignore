@@ -31,3 +31,4 @@ regtest/data/node3/regtest
 .idea/modules.xml
 .idea/vcs.xml
 .idea/workspace.xml
+npm-debug.log

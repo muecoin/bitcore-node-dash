@@ -48,11 +48,10 @@ download_bitcoind() {
     if test $? -eq 0; then
         if [ "${is_curl}" = true ]; then
             curl -L $binary_url > $tarball_name
-            curl -L $shasums_url > SHA256SUMS.asc
+            # curl -L $shasums_url > SHA256SUMS.asc
         else
             wget $binary_url
-
-            wget $shasums_url
+            # wget $shasums_url
         fi
         if test -e "${tarball_name}"; then
             echo "Unpacking muecore distribution"
@@ -120,7 +119,8 @@ if [ "${download}" = 1 ]; then
 fi
 
 if [ "${verify}" = 1 ]; then
-    verify_download
+    # verify_download
+    echo "Skip verification"
 fi
 
 exit 0
