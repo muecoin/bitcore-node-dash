@@ -1,6 +1,6 @@
 {
   "name": "bitcore-node-mue",
-  "description": "Full node with extended capabilities using Bitcore and MUE Core",
+  "description": "Full node with extended capabilities using Bitcore and MUECore",
   "author": "BitPay <dev@bitpay.com>",
   "version": "0.0.1",
   "main": "./index.js",
@@ -24,6 +24,10 @@
     {
       "name": "Patrick Nagurny",
       "email": "patrick@bitpay.com"
+    },
+    {
+      "name": "Al Z",
+      "email": "awz@empirictechs.com"
     }
   ],
   "bin": {
@@ -39,13 +43,14 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "dash",
-    "dashd"
+    "monetaryunit",
+    "mued",
+    "mue"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-dash": "^0.7.1",
-    "bitcore-lib-mue": "^0.13.20",
+    "bitcoind-rpc-mue": "latest",
+    "bitcore-lib-mue": "latest",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -67,7 +72,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-dash": "^1.1.2",
+    "bitcore-p2p-mue": "latest",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",

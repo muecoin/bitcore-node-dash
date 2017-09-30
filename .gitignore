@@ -27,9 +27,6 @@ bin/SHA256SUMS.asc
 regtest/data/node1/regtest
 regtest/data/node2/regtest
 regtest/data/node3/regtest
-.idea/bitcore-node-mue.iml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea/
 npm-debug.log
 yarn.lock
