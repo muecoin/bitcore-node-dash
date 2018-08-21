@@ -2,21 +2,21 @@
 
 set -e
 
-root_dir="${HOME}/.bitcore"
+root_dir="${HOME}/.muecore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 # TODO Update version and releases URL
-version="1.0.0.1"
-url="https://github.com/muecoin/MonetaryUnit-X11-BETA/raw/master/muex11beta-1.0.0.1.tgz"
+version="1.0.3.2"
+url="https://monetaryunit.org/bin/monetaryunit-1.0.3.2.tar.gz"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
-        tarball_name="muecore-${version}-linux64.tar.gz"
+        tarball_name="monetaryunit-${version}.tar.gz"
     elif [ "${arch}" == "x86_32" ]; then
-        tarball_name="muecore-${version}-linux32.tar.gz"
+        tarball_name="monetaryunit-${version}.tar.gz"
     fi
 elif [ "${platform}" == "darwin" ]; then
-    tarball_name="muecore-${version}-osx64.tar.gz"
+    tarball_name="monetaryunit-${version}.tar.gz"
 else
     echo "MUE binary distribution not available for platform and architecture"
     exit -1
@@ -57,7 +57,7 @@ download_bitcoind() {
             echo "Unpacking muecore distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-            #    ln -sf "muecore-${version}/bin/mued"
+            #    ln -sf "monetaryunit-${version}/bin/mued"
                 return;
             fi
         fi
